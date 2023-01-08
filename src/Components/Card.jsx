@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@mui/material';
+import { Button, Tooltip } from '@mui/material';
 import '../Styles/Card.scss';
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 
@@ -14,8 +14,8 @@ function Card(props) {
         let elements = []
         for (let i = 1; i <= 5; i++) {
             elements.push(
-                rate >= i ? rate >= i + 1 ? <BsStarFill key={i}/> :
-                    <BsStarHalf key={i}/> : <BsStar key={i}/>
+                rate >= i ? rate >= i + 1 ? <BsStarFill key={i} /> :
+                    <BsStarHalf key={i} /> : <BsStar key={i} />
             )
         }
         return elements
@@ -33,7 +33,9 @@ function Card(props) {
                     </div>
                 </div>
                 <div className='CardButton'>
-                    <Button>Add</Button>
+                    <Tooltip title="Add prduct to your cart" arrow placement='top'>
+                        <Button>Add</Button>
+                    </Tooltip>
                 </div>
             </div>
         </div>
