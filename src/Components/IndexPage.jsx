@@ -38,22 +38,22 @@ function IndexPage() {
             </section>
             <footer className='IndexPageFooter'>
                 <div className='IndexPageFooterSocialMediaContainer'>
-                    <span className='IndexPageFooterSocialMediaItem'>
+                    <a className='IndexPageFooterSocialMediaItem' href='https://www.instagram.com'>
                         <img src={InstagramIcon} alt={""} />
                         <p>Instagram</p>
-                    </span>
-                    <span className='IndexPageFooterSocialMediaItem'>
+                    </a>
+                    <a className='IndexPageFooterSocialMediaItem' href='https://www.facebook.com'>
                         <img src={FacebookIcon} alt={""} />
                         <p>Facebook</p>
-                    </span>
-                    <span className='IndexPageFooterSocialMediaItem'>
+                    </a>
+                    <a className='IndexPageFooterSocialMediaItem' href='https://www.twitter.com'>
                         <img src={TwitterIcon} alt={""} />
                         <p>Twitter</p>
-                    </span>
-                    <span className='IndexPageFooterSocialMediaItem'>
+                    </a>
+                    <a className='IndexPageFooterSocialMediaItem' href='https://www.tiktok.com'>
                         <img src={TiktokIcon} alt={""} />
                         <p>Tiktok</p>
-                    </span>
+                    </a>
                 </div>
                 <p className='IndexPageFooterCopyright'>{`© Copyright ${momentYear}  - Company - All directs reserved`}</p>
             </footer>
