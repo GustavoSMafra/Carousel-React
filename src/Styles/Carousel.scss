@@ -27,6 +27,14 @@
             animation-name: animationCard;
             animation-duration: 15s;
             animation-iteration-count: infinite;
+
+            &.true {
+                animation-play-state: running;
+            }
+
+            &.false {
+                animation-play-state: paused;
+            }
         }
     }
 }

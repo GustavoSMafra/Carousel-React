@@ -10,6 +10,7 @@ import { Loading } from 'react-loading-dot';
 function Carousel() {
 
     const [cards, setCards] = useState(false);
+    const [animation, setAnimation] = useState(true);
 
     useEffect(() => {
         const db = StartFirebase();
@@ -19,9 +20,9 @@ function Carousel() {
 
     return cards ? (
         <div className='CarouselContainer'>
-            <div className='CarouselController'><GrPrevious size={60} /></div>
+            <div className='CarouselController'><GrPrevious size={60} onClick={() => setAnimation(false)}/></div>
             <div className='CarouselCards'>
-                <div className='CarouselCardsContainer'>
+                <div className={`CarouselCardsContainer ${animation}`}>
                     {
                         Object.keys(cards.Products).map((card, key) => {
                             return (
@@ -31,7 +32,7 @@ function Carousel() {
                     }
                 </div>
             </div>
-            <div className='CarouselController'><GrNext size={60} /></div>
+            <div className='CarouselController'><GrNext size={60} onClick={() => setAnimation(false)} /></div>
         </div>
     ) :  <Loading background='Black'/>
 }
